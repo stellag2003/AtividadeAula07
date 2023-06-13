@@ -1,0 +1,52 @@
+ double valor;
+        string resposta;
+        
+        
+        
+         
+        Console.WriteLine("Insira o cartao ou outra forma de pagamento");
+        Console.WriteLine("Quanto voce quer depositar/inserir?");
+        valor=double.Parse(Console.ReadLine());
+        
+         Console.WriteLine("Aqui estao as opcoes do cardapio:");
+        Console.WriteLine("Cafe Expresso -R$3,00");
+        Console.WriteLine("Capuccino -R$4,50");
+        Console.WriteLine("Mocaccino -R$6,00");
+        Console.WriteLine("Agua quente -R$1,00");
+        resposta=Console.ReadLine();
+        
+        if(resposta != "Cafe Expresso" && resposta != "Capuccino" && resposta != "Mocaccino" && resposta != "Agua quente")
+        {
+         
+          Console.WriteLine("Escolha uma opcao valida\n");
+          Main(null);
+          return;
+        }
+        
+        Console.WriteLine($"Conferindo o saldo... R${valor}");
+       
+        
+         if(valor < 1.00 || valor < 3.00 || valor < 4.50 || valor < 6.00)
+        {
+            Console.WriteLine("Saldo insuficiente\n");
+            Main(null);
+            return;
+        }
+        
+        Console.WriteLine("Seu pedido foi concluido, agora e so aguardar!\n");
+        Main(null);
+        return;
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        Console.ReadKey();
